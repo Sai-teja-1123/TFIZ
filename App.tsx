@@ -6,6 +6,7 @@ import {
   QrCode, ChevronLeft, ChevronRight, CreditCard, Truck, ShieldCheck,
   Smartphone, MapPin, Mail, User, Zap, Info, Database, Eye, EyeOff, PlusSquare, Package, Gift, Trophy, Dice5
 } from 'lucide-react';
+import logoImg from './logo.jpeg';
 import { Product, CartItem, ARState, Category, BillingDetails, AREffect } from './types.ts';
 import { PRODUCTS, CATEGORIES } from './constants.ts';
 import { connectLiveSession } from './services/geminiService.ts';
@@ -19,7 +20,7 @@ const formatPrice = (price: number) => `${CURRENCY}${price.toLocaleString('en-IN
  */
 const BrandLogoIcon = ({ className = "w-full h-full" }: { className?: string }) => (
   <img
-    src="/logo.jpeg"
+    src={logoImg}
     alt="TFiZ logo"
     className={`object-cover scale-150 ${className}`}
   />
